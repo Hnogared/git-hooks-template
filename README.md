@@ -1,1 +1,1 @@
-#Template for git hooks
+# Template for git hooks
