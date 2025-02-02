@@ -2,4 +2,6 @@
 
 ## Usage
 Consists of a package.json for installing commitlint and running the hooks setup script.<br/>
-When cloning run `npm install` to setup everything.
+After cloning run `npm install` to setup everything.
+
+Hooks can be added to the `.githooks/` folder and installed with `npm install`. 
