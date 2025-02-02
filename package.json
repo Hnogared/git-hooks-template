@@ -1,0 +1,11 @@
+{
+  "name": "git-hooks-template",
+  "version": "0.0.5",
+  "scripts": {
+    "prepare": "bash ./setup-git-hooks.sh"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0"
+  }
+}
