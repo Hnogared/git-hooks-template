@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Run commit lint with the commit message
-# You can install commit lint with: npm install --save-dev @commitlint/{config-conventional,cli}
-npx --no-install commitlint --edit "$1"
