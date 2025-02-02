@@ -1,6 +1,6 @@
 {
   "name": "git-hooks-template",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "scripts": {
     "prepare": "bash ./setup-git-hooks.sh"
   },
