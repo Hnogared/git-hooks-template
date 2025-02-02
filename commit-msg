@@ -1,0 +1,11 @@
+#!/bin/sh
+
+COMMIT_MSG=$(cat "$1")
+
+COMMIT_TYPES="build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test"
+
+if ! echo "$COMMIT_MSG" | grep -qE "^($COMMIT_TYPES):"; then
+  echo -e "\e[31m[Error] Commit message must start with '\e[33m[$COMMIT_TYPES]:\e[31m'\e[0m"
+  echo -e "Please try again with the correct Syntax next time you talk to me."
+  exit 1
+fi
