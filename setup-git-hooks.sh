@@ -2,15 +2,17 @@
 # Bash script to set up the git hooks of a git repository.
 
 MSGS_HEADER="[Git hooks setup]"
+SRC_HOOKS_DIR=".githooks"
+DEST_HOOKS_DIR=".git/hooks"
 
 echo "$MSGS_HEADER Setting up git hooks..."
 
-HOOKS_DIR=".git/hooks"
-COMMIT_MSG_HOOK="$HOOKS_DIR/commit-msg"
+# Exit if any of the following commands exits with non zero
+set -e
 
-mkdir -p $HOOKS_DIR
-echo "#!/bin/sh" > $COMMIT_MSG_HOOK
-echo "npx --no-install commitlint --edit \"\$1\"" >> $COMMIT_MSG_HOOK
-chmod +x $COMMIT_MSG_HOOK
+mkdir -p "$DEST_HOOKS_DIR"
+cp "$SRC_HOOKS_DIR"/* "$DEST_HOOKS_DIR"
+
+chmod -R +x "$DEST_HOOKS_DIR"
 
 echo "$MSGS_HEADER Done !"
