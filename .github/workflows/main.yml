@@ -1,0 +1,14 @@
+name: Prevent Merging from custom-lint-script
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  prevent-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check source branch
+        if: github.head_ref == 'custom-lint-script'
+        run: exit 1
